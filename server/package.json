@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "A Genshin Impact's Gacha Pity Wish System Simulator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev" : "nodemon server"
+  },
+  "keywords": [],
+  "author": {
+    "name" : "Saurav Pal",
+    "email": "resyfer.dev@gmail.com",
+    "url" : "http://resyfer.vercel.app/"
+  },
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  },
+  "repository": "github:resyfer/genshin-wish-simulator"
+}
