@@ -23,12 +23,12 @@ const types = [
 			{
 				rateup: true,
 				standard: true,
-				probability: 6.5,
+				probability: 2.55,
 			},
 			{
 				rateup: false,
 				standard: true,
-				probability: 6.5,
+				probability: 2.55,
 			},
 		],
 	},
@@ -38,7 +38,7 @@ const types = [
 			{
 				rateup: false,
 				standard: true,
-				probability: 86.4,
+				probability: 94.3,
 			},
 		],
 	},
