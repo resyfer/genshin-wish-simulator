@@ -23,5 +23,8 @@
   "devDependencies": {
     "standard": "^16.0.3"
   },
-  "repository": "github:resyfer/genshin-wish-simulator"
+  "repository": "github:resyfer/genshin-wish-simulator",
+  "engines": {
+    "node": "14.x"
+  }
 }
