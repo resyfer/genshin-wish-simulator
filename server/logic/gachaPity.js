@@ -22,7 +22,7 @@ const types = [
 		chances: [
 			{
 				rateup: true,
-				standard: false,
+				standard: true,
 				probability: 6.5,
 			},
 			{
@@ -36,7 +36,7 @@ const types = [
 		value: 3,
 		chances: [
 			{
-				rateup: true,
+				rateup: false,
 				standard: true,
 				probability: 86.4,
 			},

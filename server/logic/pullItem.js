@@ -13,13 +13,9 @@ const itemFetch = async n => {
 			rateup: pullArr[i].rateup,
 			standard: pullArr[i].standard,
 		});
-		console.log(
-			'Pull : ',
-			pullArr[i].value,
-			pullArr[i].rateup,
-			pullArr[i].standard
-		);
-		itemArr.push(item[~~((Math.random() * 65451564) % item.length)]);
+
+		let pullItem = item[~~((Math.random() * 65451564) % item.length)];
+		itemArr.push(pullItem);
 	}
 	return itemArr;
 };
