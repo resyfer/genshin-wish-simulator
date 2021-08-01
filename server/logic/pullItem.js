@@ -2,8 +2,14 @@ const { Item } = require('../models/ItemModel');
 const { pulls } = require('../logic/gachaPity');
 
 let pity = {
-	pity4: 0,
-	pity5: 0,
+	pity4: {
+		value: 0,
+		guarantee: false,
+	},
+	pity5: {
+		value: 0,
+		guarantee: false,
+	},
 };
 
 const itemFetch = async n => {
@@ -14,32 +20,38 @@ const itemFetch = async n => {
 	for (let i = 0; i < n; i++) {
 		let pull = {
 			value: pullArr[i].value,
-			rarity: pullArr[i].rateup,
+			rateup: pullArr[i].rateup,
 			standard: pullArr[i].standard,
 		};
 
-		if (pity.pity5 >= 89) {
+		if (pity.pity5.value >= 89) {
 			pull.value = 5;
-			pull.rateup = Boolean(~~(Math.random() * 45837) % 2);
+			pull.rateup = pity.pity5.guarantee
+				? true
+				: Boolean(~~(Math.random() * 45837) % 2);
 			pull.standard = !pull.rateup;
-		} else if (pity.pity4 >= 9) {
+		} else if (pity.pity4.value >= 9) {
 			pull.value = 4;
-			pull.rateup = true;
+			pull.rateup = pity.pity4.guarantee
+				? true
+				: Boolean(~~(Math.random() * 45837) % 2);
 			pull.standard = true;
 		}
 
-		pity.pity4 = pull.value == 4 ? 0 : pity.pity4 + 1;
-		pity.pity5 = pull.value == 5 ? 0 : pity.pity5 + 1;
+		pity.pity4.value = pull.value == 4 ? 0 : pity.pity4.value + 1;
+		pity.pity5.value = pull.value == 5 ? 0 : pity.pity5.value + 1;
+
+		if (pull.value == 5) pity.pity5.guarantee = !pull.rateup;
+		if (pull.value == 4) pity.pity4.guarantee = !pull.rateup;
 
 		const item = await Item.find({
-			rarity: pullArr[i].value,
-			rateup: pullArr[i].rateup,
-			standard: pullArr[i].standard,
+			rarity: pull.value,
+			rateup: pull.rateup,
+			standard: pull.standard,
 		});
 
-		let pullItem = item[~~((Math.random() * 654653486) % item.length)];
+		let pullItem = item[~~(Math.random() * 654653486) % item.length];
 		itemArr.push(pullItem);
-		console.log(pity.pity4, pity.pity5);
 	}
 	return itemArr;
 };
