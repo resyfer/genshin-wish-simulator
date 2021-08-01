@@ -28,7 +28,7 @@ Moreover, there's a guaranteed 5⭐ in every 90 pulls from the previous 5⭐, an
 
 ## Development
 
-- Clone the project, and install the dependencies
+i) Clone the project, and install the dependencies
 ```
 git clone https://github.com/resyfer/genshin-wish-simulator.git
 cd genshin-wish-simulator
@@ -37,8 +37,9 @@ cd ..
 cd client && npm i
 ```
 
-- Environment Variables
-The make a copy of `.env.example` and rename it as `.env` and enter your own MongoDB database below the existing content as:
+ii) Environment Variables
+
+Make a copy of `.env.example` and rename it as `.env` and enter your own MongoDB database below the existing content as:
 ```
 MONGO_URI = YOUR_MONGODB_URL_HERE
 ```
