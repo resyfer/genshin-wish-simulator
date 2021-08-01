@@ -17,11 +17,10 @@ const probArr = probObjArr => {
 				value: probObjArr[i].value,
 				rateup: probObjArr[i].chances[j].rateup,
 				standard: probObjArr[i].chances[j].standard,
-				probability: cumProb,
+				probability: Number(cumProb.toFixed(2)),
 			});
 		}
 	}
-
 	return cumProbArr;
 };
 

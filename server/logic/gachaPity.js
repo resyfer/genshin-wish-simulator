@@ -38,7 +38,7 @@ const types = [
 			{
 				rateup: false,
 				standard: true,
-				probability: 94.3,
+				probability: 94.3
 			},
 		],
 	},
@@ -50,7 +50,6 @@ const pulls = n => {
 	const items = [];
 
 	for (let i = 0; i < n; i++) items.push(probItem(cumulativeDistribution));
-
 	return items;
 };
 
