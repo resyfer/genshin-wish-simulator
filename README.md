@@ -1,6 +1,6 @@
 # Genshin Impact Wish Simulator
 
-![img](https://img.shields.io/github/license/resyfer/quantum-tunneling?color=blueviolet) ![img](https://img.shields.io/badge/Status-Work%20In%20Progress-orange) ![img](https://img.shields.io/badge/Stack-MERN-4722df)
+![img](https://img.shields.io/github/license/resyfer/genshin-wish-simulator?color=blueviolet) ![img](https://img.shields.io/badge/Status-Work%20In%20Progress-orange) ![img](https://img.shields.io/badge/Stack-MERN-4722df)
 
 My Simulator for Genshin Impact's probability driven Gacha Wish System
 
@@ -43,6 +43,22 @@ Make a copy of `.env.example` and rename it as `.env` and enter your own MongoDB
 ```
 MONGO_URI = YOUR_MONGODB_URL_HERE
 ```
+
+iii) Run the project
+Open two terminal tabs and cd into the project in both
+
+- Tab 1:
+```
+cd server
+npm run dev
+```
+
+- Tab 2:
+```
+cd client
+npm start
+```
+
 (Ask for `.env` from author if authorized)
 
-![img](https://img.shields.io/tokei/lines/github/resyfer/quantum-tunneling) ![img](https://img.shields.io/github/repo-size/resyfer/quantum-tunneling)
+![img](https://img.shields.io/tokei/lines/github/resyfer/genshin-wish-simulator) ![img](https://img.shields.io/github/repo-size/resyfer/genshin-wish-simulator)
