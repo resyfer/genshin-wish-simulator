@@ -41,9 +41,6 @@ const itemFetch = async (n, pity) => {
 
 		let pullItem = item[~~(Math.random() * 654653486) % item.length];
 		itemArr.push(pullItem);
-		console.log(pity.pity4.value, pity.pity4.guarantee);
-		console.log(pity.pity5.value, pity.pity5.guarantee);
-		console.log('------------------------');
 	}
 	return itemArr;
 };
