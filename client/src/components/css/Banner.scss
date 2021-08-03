@@ -6,15 +6,18 @@ img.banner {
 
 	height: 65%;
 
+	display: none;
+
 	animation : {
-		name: hello;
+		// name: move;
 		duration: 0.2s;
+		delay: 0.1s;
 		timing-function: ease-out;
 		fill-mode: forwards;
 	}
 }
 
-@keyframes hello {
+@keyframes move {
 	100% {
 		transform: translate(-50%, -50%);
 	}
