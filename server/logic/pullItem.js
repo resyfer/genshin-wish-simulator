@@ -1,18 +1,7 @@
 const { Item } = require('../models/ItemModel');
 const { pulls } = require('../logic/gachaPity');
 
-let pity = {
-	pity4: {
-		value: 0,
-		guarantee: false,
-	},
-	pity5: {
-		value: 0,
-		guarantee: false,
-	},
-};
-
-const itemFetch = async n => {
+const itemFetch = async (n, pity) => {
 	const pullArr = pulls(n);
 
 	const itemArr = [];
@@ -52,6 +41,9 @@ const itemFetch = async n => {
 
 		let pullItem = item[~~(Math.random() * 654653486) % item.length];
 		itemArr.push(pullItem);
+		console.log(pity.pity4.value, pity.pity4.guarantee);
+		console.log(pity.pity5.value, pity.pity5.guarantee);
+		console.log('------------------------');
 	}
 	return itemArr;
 };

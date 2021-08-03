@@ -10,8 +10,23 @@ router.get('/', (req, res) => {
 
 router.get('/all', allItemsGet);
 
-router.get('/one', (req, res) => ItemGet(req, res, 1));
-router.get('/ten', (req, res) => ItemGet(req, res, 10));
+let pity = {
+	pity4: {
+		value: 0,
+		guarantee: false,
+	},
+	pity5: {
+		value: 0,
+		guarantee: false,
+	},
+};
+
+router.get('/one/:p5val/:p5guar/:p4val/:p4guar/', (req, res) => {
+	ItemGet(req, res, pity, 1);
+});
+router.get('/ten/:p5val/:p5guar/:p4val/:p4guar/', (req, res) =>
+	ItemGet(req, res, pity, 10)
+);
 
 module.exports = {
 	router,
