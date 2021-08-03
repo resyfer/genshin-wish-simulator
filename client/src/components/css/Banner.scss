@@ -1,0 +1,21 @@
+img.banner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-48.5%, -50%);
+
+	height: 65%;
+
+	animation : {
+		name: hello;
+		duration: 0.2s;
+		timing-function: ease-out;
+		fill-mode: forwards;
+	}
+}
+
+@keyframes hello {
+	100% {
+		transform: translate(-50%, -50%);
+	}
+}
