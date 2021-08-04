@@ -17,7 +17,7 @@ Backend API Calls :
 
 `p5guar` and `p4guar` mean the guarantee rateup drop in numbers being either `1` for guarateed pity, `0` otherwise. 
 
-eg. `https://resyfer-genshin-wish-sim.herokuapp.com/api/v1/ten/85/1/5/0` means 5⭐ pity at 85 with a guaranteed rateup drop, and 4⭐ pity at 5 with no guarantee
+eg. `https://resyfer-genshin-wish-sim.herokuapp.com/api/v1/10/85/1/5/0` means 5⭐ pity at 85 with a guaranteed rateup drop, and 4⭐ pity at 5 with no guarantee
 
 **NOTE**: The current rates for the characters or items are for the banner `Adrift In The Harbor`
 
