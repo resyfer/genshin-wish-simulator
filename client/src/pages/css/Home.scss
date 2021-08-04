@@ -11,3 +11,88 @@ img.bgpic {
 
 	display: none;
 }
+
+div.wishes {
+	display: flex;
+
+	height: 3.5vh;
+
+	position: absolute;
+	top: 3%;
+	right: 10%;
+
+	img {
+		height: 100%;
+	}
+
+	div.limit {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin: 0 1.25vh;
+		background-color: rgba(54, 54, 54, 0.5);
+		padding: 0.5vh 1.5vh;
+		border-radius: 5vh;
+		color: white;
+		font-size: 2.2vh;
+
+		img.limit-icon {
+			margin-right: 2vh;
+		}
+	}
+}
+
+div.pulls {
+	position: absolute;
+	height: 8.5vh;
+	// overflow: hidden;
+
+	display: flex;
+	flex-direction: row;
+	bottom: 2.5%;
+	right: 2.5%;
+
+	a.pull-btn {
+		position: relative;
+		margin: 0 1vh;
+		width: 17.5vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		overflow: hidden;
+		padding: 1vh 0;
+
+		img.pull-btn-img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -2;
+			height: 100%;
+		}
+
+		span.pull-btn-txt {
+			display: flex;
+			flex-direction: row;
+			margin: 0.25vh;
+			color: rgb(180, 158, 85);
+			font-size: 2.2vh;
+
+			img.wish-icon {
+				height: 8%;
+				margin-right: 0.8vh;
+			}
+		}
+	}
+}
+
+div.pity-counter {
+	position: absolute;
+	top: 2.5%;
+	left: 2%;
+	color: rgb(214, 214, 214);
+	background-color: rgba(180, 158, 85, 0.8);
+	padding: 1vh 2vh;
+	border-radius: 2vh;
+}

@@ -1,6 +1,6 @@
 const imgDisplay = (target, style) => {
 	target.style.display = 'block';
-	target.style.animationName = style.animationName;
+	target.style.animationName = style.animationName || 'none';
 };
 
 const imgLoad = (e, style) => {

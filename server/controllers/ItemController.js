@@ -19,9 +19,12 @@ const ItemGet = async (req, res, pity, n) => {
 	pity.pity4.value = parseInt(req.params.p4val, 10);
 	pity.pity4.guarantee = parseInt(req.params.p4guar, 10);
 
+	let pulls = await itemFetch(n, pity);
+
 	res.status(200).json({
 		success: true,
-		data: await itemFetch(n, pity),
+		data: pulls.itemArr,
+		pity: pulls.pity,
 	});
 };
 

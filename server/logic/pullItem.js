@@ -42,7 +42,7 @@ const itemFetch = async (n, pity) => {
 		let pullItem = item[~~(Math.random() * 654653486) % item.length];
 		itemArr.push(pullItem);
 	}
-	return itemArr;
+	return { itemArr, pity };
 };
 
 module.exports = {

@@ -2,7 +2,7 @@ img.banner {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-48.5%, -50%);
+	transform: translate(-47%, -50%);
 
 	height: 65%;
 
@@ -10,9 +10,9 @@ img.banner {
 
 	animation : {
 		// name: move;
-		duration: 0.2s;
+		duration: 0.5s;
 		delay: 0.1s;
-		timing-function: ease-out;
+		timing-function: cubic-bezier(0.44, 0.42, 0.24, 0.47);
 		fill-mode: forwards;
 	}
 }

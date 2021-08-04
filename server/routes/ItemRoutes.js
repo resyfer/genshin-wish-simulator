@@ -21,11 +21,8 @@ let pity = {
 	},
 };
 
-router.get('/one/:p5val/:p5guar/:p4val/:p4guar/', (req, res) => {
-	ItemGet(req, res, pity, 1);
-});
-router.get('/ten/:p5val/:p5guar/:p4val/:p4guar/', (req, res) =>
-	ItemGet(req, res, pity, 10)
+router.get('/:pulls/:p5val/:p5guar/:p4val/:p4guar/', (req, res) =>
+	ItemGet(req, res, pity, parseInt(req.params.pulls, 10))
 );
 
 module.exports = {
