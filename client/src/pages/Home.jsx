@@ -59,7 +59,7 @@ const Home = () => {
 						alt='Img not supported'
 						onLoad={e => imgLoad(e, {})}
 					/>
-					<span className='pull-btn-txt'>Wish x1</span>
+					<span className='pull-btn-txt'>Wish x 1</span>
 					<span className='pull-btn-txt'>
 						<img
 							className='wish-icon'
@@ -78,7 +78,7 @@ const Home = () => {
 						alt='Img not supported'
 						onLoad={e => imgLoad(e, {})}
 					/>
-					<span className='pull-btn-txt'>Wish x10</span>
+					<span className='pull-btn-txt'>Wish x 10</span>
 					<span className='pull-btn-txt'>
 						<img
 							className='wish-icon'

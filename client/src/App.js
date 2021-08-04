@@ -12,7 +12,7 @@ function App() {
 	const [pity, setPity] = useState({
 		pity5: {
 			value: 0,
-			guarantee: true,
+			guarantee: false,
 		},
 
 		pity4: {

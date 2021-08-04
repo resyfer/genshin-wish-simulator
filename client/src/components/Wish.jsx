@@ -20,7 +20,7 @@ const Wish = props => {
 
 			setPulls(fetchJson.data);
 
-			setPity(oldPity => ({
+			setPity({
 				pity5: {
 					value: fetchJson.pity.pity5.value,
 					guarantee: fetchJson.pity.pity5.guarantee,
@@ -30,12 +30,10 @@ const Wish = props => {
 					value: fetchJson.pity.pity4.value,
 					guarantee: fetchJson.pity.pity4.guarantee,
 				},
-			}));
+			});
 		})();
 		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
-
-	useEffect(() => {}, []);
 	return (
 		<div className='hello'>
 			{pulls &&
