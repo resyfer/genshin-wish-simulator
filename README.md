@@ -10,8 +10,8 @@ Frontend : [![img](https://img.shields.io/badge/Status-Work%20In%20Progress-oran
 
 Backend API Calls :
 - `GET` `https://resyfer-genshin-wish-sim.herokuapp.com/api/v1/all` : To view all items available through Gacha
-- `GET` `https://resyfer-genshin-wish-sim.herokuapp.com/api/v1/one/p5val/p5guar/p4val/p4guar/` : To make a 1 pull
-- `GET` `https://resyfer-genshin-wish-sim.herokuapp.com/api/v1/ten/p5val/p5guar/p4val/p4guar/` : To make a 10 pull
+- `GET` `https://resyfer-genshin-wish-sim.herokuapp.com/api/v1/1/p5val/p5guar/p4val/p4guar/` : To make a 1 pull
+- `GET` `https://resyfer-genshin-wish-sim.herokuapp.com/api/v1/10/p5val/p5guar/p4val/p4guar/` : To make a 10 pull
 
 `p5val` and `p4val` mean the pity in numbers with a range of `0-89` and `0-9` respectively.
 
