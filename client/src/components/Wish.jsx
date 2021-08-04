@@ -20,6 +20,7 @@ const Wish = props => {
 	const [pulls, setPulls] = useState(null);
 	const [videoUrl, setVideoUrl] = useState(null);
 
+	const homeBgPic = useRef();
 	const wishBgPic = useRef();
 
 	const { pity, setPity } = useContext(pityContext);
@@ -53,7 +54,7 @@ const Wish = props => {
 		<div className='wish'>
 			<img
 				className='wish-bg-pic'
-				ref={wishBgPic}
+				ref={homeBgPic}
 				src={bgPicUrl}
 				alt='Img not supported'
 				onLoad={e => imgLoad(e, {})}
@@ -66,7 +67,8 @@ const Wish = props => {
 						e.target.style.display = 'none';
 					}}
 					onCanPlayThrough={e => {
-						wishBgPic.current.style.display = 'none';
+						homeBgPic.current.style.display = 'none';
+						wishBgPic.current.style.display = 'block';
 						e.target.play();
 					}}
 				/>
@@ -74,6 +76,7 @@ const Wish = props => {
 
 			<img
 				src={pullBgPicUrl}
+				ref={wishBgPic}
 				alt='Img not supported'
 				className='pull-bg'
 				onLoad={e => imgLoad(e, {})}
