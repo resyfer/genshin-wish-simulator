@@ -1,0 +1,30 @@
+img.wish-bg-pic {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 100%;
+	min-width: 100%;
+	transform: translate(-50%, -50%);
+	z-index: +5;
+}
+
+video.pull-video {
+	min-height: 100%;
+	min-height: 100%;
+	max-width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: +4;
+}
+
+img.pull-bg {
+	z-index: -15;
+	height: 105%;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

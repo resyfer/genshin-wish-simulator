@@ -4,6 +4,8 @@ const { pulls } = require('../logic/gachaPity');
 const itemFetch = async (n, pity) => {
 	const pullArr = pulls(n);
 
+	let maxRarity = 0;
+
 	const itemArr = [];
 
 	for (let i = 0; i < n; i++) {
@@ -33,6 +35,8 @@ const itemFetch = async (n, pity) => {
 		if (pull.value == 5) pity.pity5.guarantee = !pull.rateup;
 		if (pull.value == 4) pity.pity4.guarantee = !pull.rateup;
 
+		maxRarity = Math.max(maxRarity, pull.value);
+
 		const item = await Item.find({
 			rarity: pull.value,
 			rateup: pull.rateup,
@@ -42,7 +46,7 @@ const itemFetch = async (n, pity) => {
 		let pullItem = item[~~(Math.random() * 654653486) % item.length];
 		itemArr.push(pullItem);
 	}
-	return { itemArr, pity };
+	return { itemArr, pity, maxRarity };
 };
 
 module.exports = {

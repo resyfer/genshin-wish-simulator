@@ -23,8 +23,9 @@ const ItemGet = async (req, res, pity, n) => {
 
 	res.status(200).json({
 		success: true,
-		data: pulls.itemArr,
+		video: `/video/${pulls.maxRarity}${n}.mp4`,
 		pity: pulls.pity,
+		data: pulls.itemArr,
 	});
 };
 

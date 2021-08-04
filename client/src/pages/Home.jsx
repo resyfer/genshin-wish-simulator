@@ -51,6 +51,22 @@ const Home = () => {
 				</div>
 			</div>
 
+			<div className='pity-counter'>
+				5⭐
+				<br />
+				&emsp;Pity: {pity.pity5.value}
+				<br />
+				&emsp;Guranteed: {pity.pity5.guarantee ? 'Yes' : 'No'}
+				<br />
+				<br />
+				4⭐
+				<br />
+				&emsp;Pity: {pity.pity4.value}
+				<br />
+				&emsp;Guranteed: {pity.pity5.guarantee ? 'Yes' : 'No'}
+				<br />
+			</div>
+
 			<div className='pulls'>
 				<Link className='pull-btn one-pull' to='/one'>
 					<img
@@ -89,22 +105,6 @@ const Home = () => {
 						x 10
 					</span>
 				</Link>
-			</div>
-
-			<div className='pity-counter'>
-				5⭐
-				<br />
-				&emsp;Pity: {pity.pity5.value}
-				<br />
-				&emsp;Guranteed: {pity.pity5.guarantee ? 'Yes' : 'No'}
-				<br />
-				<br />
-				4⭐
-				<br />
-				&emsp;Pity: {pity.pity4.value}
-				<br />
-				&emsp;Guranteed: {pity.pity5.guarantee ? 'Yes' : 'No'}
-				<br />
 			</div>
 
 			<Banner url={bannerUrl} />
