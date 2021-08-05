@@ -19,20 +19,10 @@ const intFatesUrl =
 const btnUrl =
 	'https://lh3.googleusercontent.com/pw/AM-JKLXw4a52xhemctFtxUmqNvEuFOqJU3LAf0VL1RYnxLprfCjhy79vcGfgMGHK3CwGaIh1hfQ88qHsNij_zb5oJTA8BKvAIKAz3sWujEx4YFBmuqj9q0kIqM7mWnmdWUmGjnppBEo-F1moucsjPp9KtGND=w355-h88-no';
 
-const videoUrls = ['31', '41', '410', '51', '510'];
-
 const Home = () => {
 	const { pity } = useContext(pityContext);
 	return (
 		<div className='home'>
-			{/* Preload pull videos */}
-			{videoUrls.map(vid => (
-				<video
-					src={`/video/${vid}.mp4`}
-					preload='auto'
-					style={{ display: 'none' }}></video>
-			))}
-
 			<img
 				className='bgpic'
 				src={bigPicUrl}

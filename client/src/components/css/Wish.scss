@@ -20,12 +20,64 @@ video.pull-video {
 }
 
 img.pull-bg {
+	display: none;
 	z-index: -15;
-	height: 105%;
+	height: 110%;
 	width: 100%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+div.loading {
+	z-index: +10;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+}
+
+div.pull {
 	display: none;
+
+	img {
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		animation : {
+			name: pullItem;
+			duration: 2s;
+			timing-function: cubic-bezier(0.23, 1.17, 1, 0.94);
+			fill-mode: forwards;
+		}
+	}
+}
+
+@keyframes pullItem {
+	0% {
+		left: 50%;
+		height: 200%;
+		filter: brightness(0);
+	}
+
+	20% {
+		left: 50%;
+		height: 100%;
+		filter: brightness(0);
+	}
+
+	50% {
+		left: 50%;
+		height: 100%;
+		filter: brightness(0);
+	}
+
+	100% {
+		height: 100%;
+		left: 53%;
+		filter: brightness(1);
+	}
 }
