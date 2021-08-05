@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Genshin;
-	src: url('./font/ja-jp.ttf');
+	src: url('./font/ja-jp.woff2');
 }
 
 * {
