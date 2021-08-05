@@ -1,3 +1,5 @@
+/*eslint no-loop-func: "error"*/
+
 import { useState, useEffect, useContext, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import pityContext from '../context/pityContext';
@@ -16,8 +18,6 @@ const bgPicUrl =
 
 const pullBgPicUrl =
 	'https://lh3.googleusercontent.com/pw/AM-JKLVEYa0ustrf_HYFgaDiAudIXQrWczEungBqhfvgZmQ0aWCmIqLe_qUsEuM8fEoyQjMKVy1L4zDQkxQt5fnC2MIORrIbbseQPwjZmsjhbdbXP3vjt92yEo9VKJD7M4Gb-UPd3aj6puRBqdQDs34k0nA-=w1243-h699-no';
-
-let pullsArr;
 
 const Wish = props => {
 	const history = useHistory();
@@ -57,7 +57,7 @@ const Wish = props => {
 	}, []);
 
 	useEffect(() => {
-		pullsArr = document.getElementsByClassName('pull');
+		let pullsArr = document.getElementsByClassName('pull');
 		for (let i = 0; i < pullsArr.length; i++) {
 			pullsArr[i].addEventListener('click', () => {
 				pullsArr[i].style.display = 'none';
@@ -67,7 +67,7 @@ const Wish = props => {
 			});
 		}
 		//eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [pullsArr]);
+	}, [pulls]);
 
 	return (
 		<div className='wish'>
@@ -87,7 +87,7 @@ const Wish = props => {
 					src={videoUrl}
 					onEnded={e => {
 						e.target.style.display = 'none';
-						pullsArr[0].style.display = 'block';
+						document.querySelector('.pull').style.display = 'block';
 					}}
 					onCanPlayThrough={e => {
 						homeBgPic.current.style.display = 'none';
