@@ -66,4 +66,12 @@ npm start
 
 (Ask for `.env` from author if authorized)
 
-![img](https://img.shields.io/tokei/lines/github/resyfer/genshin-wish-simulator) ![img](https://img.shields.io/github/repo-size/resyfer/genshin-wish-simulator)
+![img](https://img.shields.io/tokei/lines/github/resyfer/genshin-wish-simulator)
+
+## TODO
+
+- [X] API
+- [X] Basic Frontend
+- [ ] Decrease API req/res cycles, reducing response time ([Issue #1](https://github.com/resyfer/genshin-wish-simulator/issues/1))
+- [ ] Game-like Front-end
+- [ ] Include feature for selecting banners
